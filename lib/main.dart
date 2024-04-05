@@ -3,6 +3,7 @@ import 'package:flutter_1/screens/addScreen.dart';
 import 'package:flutter_1/screens/homeScreen.dart';
 import 'package:flutter_1/services/sharedPrefs.dart';
 import 'package:flutter_1/todo.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'package:flutter_1/todo.dart';
@@ -18,7 +19,7 @@ void main() async{
 WidgetsFlutterBinding.ensureInitialized();
   // SharedPreferencesMan.i.setAppFirstOpen(true);
   //debugPrint("${SharedPreferencesMan.i.getAppFirstOpen()}");
-//await Hive.initFlutter();
+await Hive.initFlutter();
 Hive.registerAdapter(TodoAdapter());
 await Hive.openBox<Todo>("myBox");
   runApp(MaterialApp(
