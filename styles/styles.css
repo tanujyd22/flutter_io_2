@@ -1,0 +1,12 @@
+.r{
+    text-align: right;
+    background-color:#fbeeff;
+    padding: 3%;
+    padding-right: 7%;
+}
+
+.l{
+    background-color: #d3fdff;
+    padding: 3%;
+    padding-left: 7% !important;
+}
